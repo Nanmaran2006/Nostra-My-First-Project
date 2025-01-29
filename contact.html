@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nostra</title>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+    
+        <link rel="stylesheet" href="style.css">
+        <script src="collect.js" defer></script>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    </head>
+
+    
+<body>
+    <nav class="navbar">
+        <h1>Nostra</h1>
+        
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="index.html"></a>Home</p>
+            <p class="navbar-link"><a href="collect.html"></a>Collections</p>
+            <p class="navbar-link"><a href="contact.html"></a>Contact</p>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="showNav()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="side-navbar">
+        <p style="text-align:right;" onclick="closeNav()">
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+
+        <div class="side-navbar-links">
+            <p class="navbar-link"><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="collect.html">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+    </div>
+
+<!--product-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nostra</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        header {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .contact-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+        }
+        .contact-info, .contact-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            transition: transform 0.3s;
+        }
+        .contact-info:hover, .contact-form:hover {
+            transform: scale(1.02);
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 12px;
+            margin-top: 5px;
+            border: 2px solid #feb47b;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact-form button {
+            margin-top: 20px;
+            padding: 12px;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: linear-gradient(to right, #feb47b, #ff7e5f);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    
+    <section class="contact-container">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p><strong>Email:</strong> support@nostra.com</p>
+            <p><strong>Phone:</strong> +1 234 567 890</p>
+            <p><strong>Address:</strong> 123 Nostra Street, E-commerce City</p>
+        </div>
+        
+        <div class="contact-form">
+            <h2>Send us a Message</h2>
+            <form id="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+            
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill out all fields.");
+                return;
+            }
+            
+            alert("Thank you, " + name + "! Your message has been sent successfully.");
+            document.getElementById("contactForm").reset();
+        });
+    </script>
+</body>
+</html>
+
+<!--footer-->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-box1">
+                <h2 class="heddingText">Nostra</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="footer-icon-container">
+                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+                </div>
+            </div>
+        </div>
+
+        <p>@ 2024 Nostra.com</p>
+    </div>
+</body>
+</html>
